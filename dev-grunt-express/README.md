@@ -39,12 +39,13 @@ Note: if you are using `boot2docker`, I found it much easier to ssh into the doc
  ```sudo npm install --no-bin-link```
 
  ```bower install```
- 9. DONE
+DONE
 
- ## Running the app
 
- Note: to use the `$(pwd)` variable below, be sure you are inside your app root directory.
+## Running the app
 
- ```
- docker run -d -p 3000:3000 -p 35729:35729 -v $(pwd):/app --name theapp dev-grunt-express
- ```
+Note: to use the `$(pwd)` variable below, be sure you are inside your app root directory.
+
+```
+docker run -d -p 3000:3000 -p 35729:35729 -v $(pwd):/app --name theapp dev-grunt-express
+```
