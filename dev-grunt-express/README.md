@@ -58,3 +58,7 @@ Note: to use the `$(pwd)` variable below, be sure you are inside your app root d
 ```sh
 docker run -d -p 3000:3000 -p 35729:35729 -v $(pwd):/app --name theapp dev-grunt-express
 ```
+
+# Contributions
+
+This is still a work-in-progress. Contributions, comments, criticism welcome!
