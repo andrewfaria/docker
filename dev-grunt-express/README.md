@@ -53,7 +53,7 @@ You can now view your work at the docker ip address, usual default is `192.168.5
 
 ## Running the app
 
-Note: to use the `$(pwd)` variable below, be sure you are inside your app root directory.
+Note: to use the `$(pwd)` variable below, be sure you are inside your app root directory. Otherwise, you must replace `$(pwd)` with an absolute path to your project.
 
 ```sh
 docker run -d -p 3000:3000 -p 35729:35729 -v $(pwd):/app --name theapp dev-grunt-express
