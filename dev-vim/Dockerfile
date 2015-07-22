@@ -1,4 +1,4 @@
-FROM ubuntu-dev
+FROM dev-ubuntu
 
 RUN apt-get install -y vim
 
