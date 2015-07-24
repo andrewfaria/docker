@@ -1,6 +1,7 @@
 # Grunt, Bower, yo (express), and Docker goodness
 
 94% reduction in size compared to Docker `ubuntu:14.04`
+
 97MB container
 
 * `FROM gliderlabs/alpine:3.2`
