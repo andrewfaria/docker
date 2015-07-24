@@ -1,6 +1,6 @@
 # Grunt, Bower, yo (express), and Docker goodness
 
-94% reduction in size compared to Docker ubuntu:14.04
+94% reduction in size compared to Docker `ubuntu:14.04`
 97MB container
 
 * `FROM gliderlabs/alpine:3.2`
@@ -38,7 +38,7 @@ Note: if you are using `boot2docker`, I found it much easier to ssh into the doc
 9. Modify your `layout.jade` (or related html header template file) and change the livereload script tag to reference your IP instead of `localhost`:
 
   assuming jade:
-  
+
   ```jade
   if ENV_DEVELOPMENT
     script(src='http://192.168.59.103:35729/livereload.js' async)
