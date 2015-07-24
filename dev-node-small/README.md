@@ -1,8 +1,8 @@
 # Grunt, Bower, yo (express), and Docker goodness
 
-74% reduction in size compared to Docker `ubuntu:14.04`
+~74% reduction in size compared to Docker `ubuntu:14.04`
 
-97mb container vs 300mb with Ubuntu image
+97mb container vs 300+mb with Ubuntu image
 
 * `FROM gliderlabs/alpine:3.2`
 * `VOLUME /app`
