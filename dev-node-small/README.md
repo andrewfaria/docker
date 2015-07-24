@@ -32,7 +32,7 @@ Note: if you are using `boot2docker`, I found it much easier to ssh into the doc
 5. Fire away in interactive mode first...
 
   ```sh
-  docker run -it --rm -v $(pwd):/app -p 3000:3000 -p 35729:35729 dev-grunt-express bash
+  docker run -it --rm -v $(pwd):/app -p 3000:3000 -p 35729:35729 dev-grunt-express sh
   ```
 
 6. run `yo generator-express`
