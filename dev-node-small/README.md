@@ -2,7 +2,7 @@
 
 94% reduction in size compared to Docker `ubuntu:14.04`
 
-97MB container
+97mb container vs 300mb with Ubuntu image
 
 * `FROM gliderlabs/alpine:3.2`
 * `VOLUME /app`
