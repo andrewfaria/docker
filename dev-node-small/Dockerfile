@@ -23,6 +23,9 @@ RUN sudo mkdir /app \
     && sudo npm install generator-express -g \
     && sudo find / -name '*gz' -type f -delete \
     && sudo rm -rf /tmp/*
+    
+EXPOSE 3000
+EXPOSE 35729
 
 VOLUME /app
 WORKDIR /app
