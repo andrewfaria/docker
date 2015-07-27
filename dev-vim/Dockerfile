@@ -1,15 +1,42 @@
-FROM dev-ubuntu
+FROM ubuntu:14.04
 
-RUN apt-get install -y vim
+RUN apt-get update \
+    && apt-get -y install \
+    curl \
+    git \
+    wget \
+    nodejs \
+    npm \
+    vim \
+    python \
+    python-dev \
+    build-essential \
+    cmake
 
-RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim && \
-    printf "execute pathogen#infect() \n syntax on \n filetype plugin indent on \n" >> ~/.vimrc
+RUN mkdir -p ~/.vim/autoload ~/.vim/bundle \
+    && git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-RUN printf "set autoindent \n set expandtab \n set shiftwidth=2 \n set softtabstop=2 \n set tabstop=2 \n" >> ~/.vimrc
+RUN cd ~/.vim/bundle \
+    && git clone https://github.com/Valloric/YouCompleteMe.git \
+    && cd YouCompleteMe \
+    && git submodule update --init --recursive
 
-RUN cd ~/.vim/bundle && \
-    git clone git://github.com/tpope/vim-sensible.git
+RUN mkdir ~/ycm_build \
+    && cd ~/ycm_build \
+    && cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp \
+    && make -j 4 ycm_support_libs
 
-RUN cd ~/.vim/bundle && \
-    git clone git://github.com/digitaltoad/vim-jade.git
+RUN cd ~/.vim/bundle \
+    && git clone https://github.com/marijnh/tern_for_vim.git \
+    && cd tern_for_vim \
+    && npm install
+
+COPY .vimrc /root/.vimrc
+
+RUN sed -i 's/\r$//' /root/.vimrc
+
+RUN vim -E -u NONE -S ~/.vimrc +PluginInstall +qall > /dev/null; exit 0
+
+VOLUME /root
+
+CMD ["bash"]
