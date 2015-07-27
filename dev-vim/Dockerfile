@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+MAINTAINER Andrew J. Faria <andrew@myimedia.com>
+
 RUN apt-get update \
     && apt-get -y install \
     curl \
