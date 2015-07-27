@@ -1,9 +1,8 @@
-# Node 0.12.2, Grunt, Bower, yo (express), and Docker goodness that works
+# Node 0.12.2, Grunt, Bower, Yeoman, and Docker goodness that works
 
-~74% reduction in size compared to Docker `ubuntu:14.04`
-
-97mb container vs 300+mb with Ubuntu image
-
+* generator-express included
+* ~74% reduction in size compared to Docker `ubuntu:14.04`
+* 97mb container vs 300+mb with Ubuntu image
 * `FROM gliderlabs/alpine:3.2`
 * `VOLUME /app`
 * port `3000` (web)
