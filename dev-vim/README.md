@@ -1,5 +1,7 @@
 # VIM with YouCompleteMe JavaScript autocomplete
 
+![](https://github.com/andrewfaria/docker/blob/master/media/js-autocomplete-vim.png)
+
 ## Plugins
 ```vim
 Plugin 'gmarik/Vundle.vim'
