@@ -1,4 +1,4 @@
-# Grunt, Bower, yo (express), and Docker goodness
+# Node 0.12.2, Grunt, Bower, yo (express), and Docker goodness that works
 
 ~74% reduction in size compared to Docker `ubuntu:14.04`
 
