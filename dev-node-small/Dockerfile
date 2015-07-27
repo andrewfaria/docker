@@ -1,4 +1,4 @@
-# Small Node Dev Server with Grunt, Yo (express), Bower
+# Small Node v0.12.2 dev Server with Grunt, Yoeoman, generator-express, and Bower
 # Alpine Linux, 5MB start
 # 75% reduction in size compared to Ubuntu:14.04
 
