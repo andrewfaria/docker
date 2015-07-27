@@ -19,5 +19,6 @@ Plugin 'scrooloose/syntastic'
 
 ## Install and Use
 1. clone this repo
-2. `docker build -t dev-vim .`
-3. `docker run -it --rm --volumes-from <your-app-container> dev-vim`
+2. `cd dev-vim`
+3. `docker build -t dev-vim .`
+4. `docker run -it --rm --volumes-from <your-app-container> dev-vim`
