@@ -34,7 +34,7 @@ Note: if you are using `boot2docker`, I found it much easier to ssh into the doc
   docker run -it --rm -v $(pwd):/app -p 3000:3000 -p 35729:35729 dev-grunt-express sh
   ```
 
-6. run `yo generator-express`
+6. run `yo express`
 9. Modify your `layout.jade` (or related html header template file) and change the livereload script tag to reference your IP instead of `localhost`:
 
   assuming jade:
